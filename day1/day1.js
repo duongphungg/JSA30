@@ -50,8 +50,8 @@
 //Các cặp điều kiện trong JS: 
 // &&: và
 // ||: hoặc
-let a = 10
-let b = 10
-let c = 8
-let check = a == b || c > b;
-console.log(check)
+// let a = 10
+// let b = 10
+// let c = 8
+// let check = a == b || c > b;
+// console.log(check)
