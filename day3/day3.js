@@ -1,5 +1,5 @@
 // vòng lặp for in
- let langs = [
+ let langs = [      //mảng
     "javascript",
     "C++",
     "java",
@@ -7,7 +7,7 @@
     "C#",
     "Python"
 ];
-let student1 = {
+let student1 = {  //object
     name: "PND",
     age: 16,
     address: "Ha Noi",
@@ -49,3 +49,7 @@ for (a of langs) {
         console.log("Giá trị của object: ", gia_tri)
     }
 }
+// B1: Chạy lệnh: git add để thêm những file vừa cập nhật
+// B2: git commit -m "Giải thích cho những thay đổi vừa rồi"
+// B3: git push origin tên_nhánh
+//(tên_nhánh là main, master,..)

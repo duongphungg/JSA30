@@ -1,6 +1,7 @@
 
 //DOM
 const productContainer = document.querySelector(".product-container")
+const searchInput = document.querySelector("#search-input")
 
 //Tạo một mảng chứa các đối tượng sản phẩm 
 const productList = [
@@ -66,15 +67,15 @@ const productList = [
   },
 ]
 
-function renderProductList() {
+function renderProductList(listProduct) {
   let htmls = "";
-  for (let i = 0; i < productList.length; i++) {
+  for (let i = 0; i < listProduct.length; i++) {
     //Qua mỗi lần dùng vòng lặp thì nối thêm sản phẩm vào htmls
     //Dấu ` ở dưới dấu ESC
     htmls += `
     <div class = "product-item">  
-      <img src=${productList[i].image}> </img>
-      <h3>${productList[i].name}</h3>
+      <img src=${listProduct[i].image}> </img>
+      <h3>${listProduct[i].name}</h3>
     </div>
     `
  }
@@ -83,5 +84,23 @@ function renderProductList() {
     
 }
 //Gọi hàm renderProductList để chạy 
-renderProductList()
+renderProductList(productList)
 
+//Hàm xử lí tìm kiếm sản phẩm
+function searchProducts (searchString) {
+  // Tạo một biến gán bằng những sản phẩm mà có tên sản phẩm bao gồm chuỗi tìm kiếm nhập từ ô input
+  let foundProduct = productList.filter( function (product) {
+    //Trả về những sản phẩm mà có tên bao gồm về ô input
+    //toLowerCase() => chuyển chuỗi thành chữ viết thường. Mục đích là khi người dùng nhập chữ hoa hay chữ thường thì đều tìm kiếm đc.
+    return product.name.toLowerCase().includes(searchString.toLowerCase()) 
+  } )
+
+}
+//Gọi hàm renderProductList và truyền tham số thật 
+renderProductList(foundProduct)
+
+
+searchInput.addEventListener("input", function(event) {
+  //event.target.value là chuỗi mà người dùng nhập vào ô input
+  searchProducts(event.target.value)
+})
