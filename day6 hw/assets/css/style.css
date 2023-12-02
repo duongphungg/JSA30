@@ -1,0 +1,47 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+nav {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.header-container {
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px;
+    font-size: 30px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+.flex-container {
+    display: flex;
+}
+
+h1 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-family: 'Cookie', cursive;
+    font-family: 'Noto Sans', sans-serif;
+    font-family: 'Playfair Display', serif;
+}
+
+ul {
+    gap: 20px;
+    font-size: 22px;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+input {
+    width: 300px;
+    height: 35px;
+}
